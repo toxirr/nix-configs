@@ -17,7 +17,7 @@
       };
 
       window = {
-        decorations = "buttonless";
+        # decorations = "buttonless";
         startup_mode = "Maximized";
         padding = {
           x = 5;

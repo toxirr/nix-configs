@@ -11,6 +11,7 @@
     ../modules/zsh.nix
     ../modules/fish.nix
     ../modules/starship.nix
+    ../modules/floorp.nix
   ];
 
   home.stateVersion = "25.11";

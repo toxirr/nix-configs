@@ -10,8 +10,6 @@
     helix
     jujutsu
 
-    rustc
-    cargo
     gcc
     pkg-config
     alejandra
@@ -19,6 +17,7 @@
     fish
     pnpm
     postman
+    git
 
     tmux # just in case
     neofetch
@@ -31,6 +30,15 @@
 
     direnv
     starship
-    firefox
+
+    tableplus
+    bruno
+    python3
+
+    docker
+    docker-compose
+    dockerfile-language-server
+    docker-color-output
+    dockerfmt
   ];
 }

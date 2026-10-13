@@ -23,6 +23,8 @@
         email = "isakulovtohir902@gmail.com";
       };
 
+      credential.helper = "store";
+
       init.defaultBranch = "main";
 
       core = {

@@ -5,9 +5,15 @@
     enable = true;
     casks = [
       "iina" # media player
-      "cloudflare-warp"
       "font-hack-nerd-font"
-      "keycastr"
+      "element" # uchar o'rin bosari
+      "spotify"
+    ];
+    brews = [
+      "ca-certificates"
+      "libpq"
+      "colima"
+      "tailscale"
     ];
     onActivation.cleanup = "zap";
   };

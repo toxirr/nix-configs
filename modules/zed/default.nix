@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.zed-editor = {
     enable = true;
@@ -7,11 +7,16 @@
 
     userSettings = import ./settings.nix { };
 
+    extraPackages = with pkgs; [
+      biome
+    ];
+
     extensions = [
       "wakatime"
       "zig"
       "material-icon-theme"
       "toml"
+      "biome"
       "nix"
       "make"
       "env"

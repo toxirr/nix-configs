@@ -12,9 +12,11 @@
 
   environment.shells = [ pkgs.fish ];
 
-  home-manager.backupFileExtension = "backup";
+  home-manager.backupFileExtension = "testaa";
 
   programs.fish.enable = true;
+
+  services.tailscale.enable = true;
 
   nixpkgs.config = {
     allowUnfree = true;
@@ -22,6 +24,9 @@
     allowUnsupportedSystem = true;
     permittedInsecurePackages = [
       "google-chrome-144.0.7559.97"
+      "docker-28.5.2"
+      "lima-full-1.2.2"
+      "lima-additional-guestagents-1.2.2"
     ];
   };
 
@@ -47,7 +52,23 @@
     '';
 
   # Necessary for using flakes on this system.
-  nix.settings.experimental-features = "nix-command flakes";
+  nix.settings = {
+    experimental-features = "nix-command flakes";
+    # substituters = [
+    #   "https://cache.xinux.uz?priority=1" # Uzbek Xinux mirror
+    #   "https://mirror.sjtu.edu.cn/nix-channels/store?priority=2" # Shanghai Jiao Tong University - best for Asia
+    #   "https://mirrors.ustc.edu.cn/nix-channels/store?priority=3" # USTC backup mirror
+    #   "https://nix-community.cachix.org?priority=4" # Community packages
+    #   "https://cache.nixos.org" # Official global cache
+    # ];
+    # http-connections = 128;
+    # max-substitution-jobs = 128;
+    # max-jobs = "auto";
+    # trusted-public-keys = [
+    #   "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    #   "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
+    # ];
+  };
 
   system.primaryUser = "tokhir";
 

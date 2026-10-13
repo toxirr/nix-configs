@@ -8,6 +8,16 @@
     enableCompletion = true;
 
     envExtra = "bindkey '^?' backward-kill-word";
+    initContent = ''
+      export PATH="$HOME/.spicetify:$PATH"
+      export PATH="$HOME/.cargo/bin:$PATH"
+      export PATH="$HOME/.local/bin:$PATH"
+      export BUN_INSTALL="$HOME/.bun"
+      export PATH="$BUN_INSTALL/bin:$PATH"
+      export PATH=/Users/tokhir/.mimocode/bin:$PATH
+      export LIBRARY_PATH="$(brew --prefix libpq)/lib"
+      export CPATH="$(brew --prefix libpq)/include"
+    '';
 
     plugins = [
       # {
@@ -38,12 +48,14 @@
       zreload = "source ~/.zshrc";
       change = "nv ~/.zshrc && zreload";
       mc = "java -jar ~/Downloads/TLauncher.jar";
-      zed = "zeditor";
+      # zed = "zeditor";
       nf = "neofetch";
       of = "onefetch";
       c = "cargo run";
       dev = "npm run dev";
       build = "npm run build";
+
+      p = "python3";
 
       l = "eza --icons";
       ls = "eza --icons";

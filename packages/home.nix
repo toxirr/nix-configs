@@ -29,5 +29,7 @@
     fishPlugins.hydro
     fishPlugins.grc
     grc
+
+    tailscale
   ];
 }
