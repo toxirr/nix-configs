@@ -3,6 +3,7 @@
   programs.zed-editor = {
     enable = true;
 
+    package = pkgs.unstable.zed-editor;
     userKeymaps = import ./keymaps.nix { };
 
     userSettings = import ./settings.nix { };

@@ -8,6 +8,7 @@
       "font-hack-nerd-font"
       "element" # uchar o'rin bosari
       "spotify"
+      "mullvad-vpn"
     ];
     brews = [
       "ca-certificates"

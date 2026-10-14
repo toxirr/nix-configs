@@ -1,5 +1,13 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
+  nixpkgs.overlays = [
+    (self: super: {
+      unstable = import inputs.nixpkgs-unstable {
+        system = pkgs.stdenv.hostPlatform.system;
+      };
+    })
+  ];
+
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -20,12 +28,10 @@
     git
 
     tmux # just in case
-    neofetch
     neovim # texting
     alt-tab-macos # i hate macos cmd+tab
     betterdisplay # scale monitor
     lazygit # tui for git operations
-    zed-editor # my fav editor rn
     google-chrome # holy chrome
 
     direnv

@@ -6,7 +6,7 @@
   ...
 }@inputs:
 nix-darwin.lib.darwinSystem {
-  specialArgs = { inherit self; };
+  specialArgs = { inherit self inputs; };
 
   modules = [
     ./configuration.nix

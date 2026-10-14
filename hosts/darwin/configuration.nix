@@ -12,7 +12,7 @@
 
   environment.shells = [ pkgs.fish ];
 
-  home-manager.backupFileExtension = "testaa";
+  home-manager.backupFileExtension = "hmbackup";
 
   programs.fish.enable = true;
 
@@ -55,7 +55,6 @@
   nix.settings = {
     experimental-features = "nix-command flakes";
     # substituters = [
-    #   "https://cache.xinux.uz?priority=1" # Uzbek Xinux mirror
     #   "https://mirror.sjtu.edu.cn/nix-channels/store?priority=2" # Shanghai Jiao Tong University - best for Asia
     #   "https://mirrors.ustc.edu.cn/nix-channels/store?priority=3" # USTC backup mirror
     #   "https://nix-community.cachix.org?priority=4" # Community packages
@@ -74,10 +73,12 @@
 
   users.users.tokhir = {
     name = "tokhir";
-
+    uid = 501;
     home = "/Users/tokhir";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
+
+  users.knownUsers = [ "tokhir" ];
 
   system.defaults = {
     dock = {
