@@ -9,6 +9,7 @@
       "element" # uchar o'rin bosari
       "spotify"
       "mullvad-vpn"
+      "yandex-music"
     ];
     brews = [
       "ca-certificates"

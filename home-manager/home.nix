@@ -12,6 +12,7 @@
     ../modules/fish.nix
     ../modules/starship.nix
     ../modules/floorp.nix
+    # ../security/pam.nix
   ];
 
   home.stateVersion = "26.05";

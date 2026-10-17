@@ -28,7 +28,9 @@
     fishPlugins.forgit
     fishPlugins.hydro
     fishPlugins.grc
+    biome
     grc
+    utm
 
     tailscale
   ];

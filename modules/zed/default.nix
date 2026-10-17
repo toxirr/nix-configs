@@ -10,6 +10,8 @@
 
     extraPackages = with pkgs; [
       biome
+      nodejs
+      cargo-toml-lint
     ];
 
     extensions = [
@@ -22,6 +24,7 @@
       "make"
       "env"
       "git-firefly"
+      "zed-cargotom"
     ];
   };
 }
